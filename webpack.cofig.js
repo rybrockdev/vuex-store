@@ -5,26 +5,26 @@ module.exports = {
         rules: [
             // SASS has different line endings than SCSS
             // and cannot use semicolons in the markup
-            {
-                test: /\.sass$/,
-                use: [
-                    'vue-style-loader',
-                    'css-loader',
-                    {
-                        loader: 'sass-loader',
-                        // Requires sass-loader@^7.0.0
-                        options: {
-                            // This is the path to your variables
-                            data: "@import '@src/styles/variables.scss'"
-                        },
-                        // Requires sass-loader@^8.0.0
-                        options: {
-                            // This is the path to your variables
-                            prependData: "@import '@src/styles/variables.scss'"
-                        },
-                    },
-                ],
-            },
+            // {
+            //     test: /\.sass$/,
+            //     use: [
+            //         'vue-style-loader',
+            //         'css-loader',
+            //         {
+            //             loader: 'sass-loader',
+            //             // Requires sass-loader@^7.0.0
+            //             options: {
+            //                 // This is the path to your variables
+            //                 data: "@import '@src/styles/variables.scss'"
+            //             },
+            //             // Requires sass-loader@^8.0.0
+            //             options: {
+            //                 // This is the path to your variables
+            //                 prependData: "@import '@src/styles/variables.scss'"
+            //             },
+            //         },
+            //     ],
+            // },
             // SCSS has different line endings than SASS
             // and needs a semicolon after the import.
             {

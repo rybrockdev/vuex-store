@@ -3,9 +3,7 @@
     <Navbar />
 
     <v-content>
-      <v-container class="fill-height" fluid>
-        <router-view></router-view>
-      </v-container>
+      <router-view></router-view>
     </v-content>
   </v-app>
 </template>
@@ -27,4 +25,7 @@ export default {
 </script>
 
 <style lang="scss">
+#App {
+  background-color: #eee;
+}
 </style>

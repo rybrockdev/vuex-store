@@ -1,9 +1,16 @@
 <template>
   <div>
-    <v-navigation-drawer v-model="drawer" app>
+    <v-navigation-drawer color="primary" v-model="drawer" app>
       <ul>
-        <router-link tag="li" to="/">Home</router-link>
-        <router-link tag="li" to="/about">About</router-link>
+        <router-link tag="li" to="/">
+          <v-icon color="orange">home</v-icon>Home
+        </router-link>
+        <router-link tag="li" to="/menu">
+          <v-icon color="#fff">restaurant_menu</v-icon>Menu
+        </router-link>
+        <router-link tag="li" to="/about">
+          <v-icon color="#f5df4b">info</v-icon>About
+        </router-link>
       </ul>
     </v-navigation-drawer>
     <v-app-bar app>
@@ -17,6 +24,8 @@
 </template>
 
 <script>
+// import "./src/styles/variables.scss";
+
 export default {
   name: "Navbar",
   data: () => ({
@@ -24,3 +33,26 @@ export default {
   })
 };
 </script>
+
+<style lang="scss">
+nav ul {
+  padding: 0;
+  margin-top: 20px;
+  text-decoration: none;
+}
+nav li {
+  color: orange;
+  margin-left: 15%;
+  padding: 5px 20px;
+  list-style-type: none;
+  cursor: pointer;
+}
+nav li i {
+  margin-right: 10px;
+}
+nav li:last-child {
+  position: absolute;
+  bottom: 40px;
+  color: #f5df4b;
+}
+</style>
