@@ -34,7 +34,7 @@
                     </v-btn>
                   </td>
                   <td>
-                    <v-btn small text>
+                    <v-btn small text @click="deleteItem(item.id)">
                       <v-icon color="red">delete</v-icon>
                     </v-btn>
                   </td>
@@ -155,6 +155,17 @@ export default {
     });
   },
   methods: {
+    deleteItem(id) {
+      dbMenuAdd
+        .doc(id)
+        .delete()
+        .then(function() {
+          console.log("Document successfully deleted!");
+        })
+        .catch(function(error) {
+          console.error("Error removing document: ", error);
+        });
+    },
     addToBasket(item) {
       this.basket.push({
         name: item.name,
