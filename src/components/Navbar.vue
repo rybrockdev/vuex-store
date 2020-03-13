@@ -11,6 +11,9 @@
         <router-link tag="li" to="/about">
           <v-icon color="#f5df4b">info</v-icon>About
         </router-link>
+        <router-link tag="li" to="/admin">
+          <v-icon color="#7a7676">info</v-icon>Admin
+        </router-link>
       </ul>
     </v-navigation-drawer>
     <v-app-bar app>

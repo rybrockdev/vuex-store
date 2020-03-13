@@ -8,9 +8,16 @@
             <template v-slot:default>
               <thead>
                 <tr>
-                  <th class="text-left" style="width: 70%;">Name of Item</th>
+                  <th class="text-left" style="width: 70%;">
+                    Name
+                    <v-btn color="orange" small text to="/addNew">
+                      <v-icon>add</v-icon>
+                      <span style="padding: 0 10px;">Add Item</span>
+                    </v-btn>
+                  </th>
                   <th class="text-left" style="width: 100px;">Price</th>
-                  <th class="text-left" style="width: 100px;">Add To Basket</th>
+                  <th class="text-left" style="width: 100px;">Edit</th>
+                  <th class="text-left" style="width: 100px;">Remove</th>
                 </tr>
               </thead>
               <tbody>
@@ -21,6 +28,16 @@
                     <span id="menu_item_description">{{ item.description }}</span>
                   </td>
                   <td>{{ item.price }}</td>
+                  <td>
+                    <v-btn small text>
+                      <v-icon color="orange">edit</v-icon>
+                    </v-btn>
+                  </td>
+                  <td>
+                    <v-btn small text>
+                      <v-icon color="red">delete</v-icon>
+                    </v-btn>
+                  </td>
                   <td>
                     <v-btn small text @click="addToBasket(item)">
                       <v-icon color="orange">add_box</v-icon>
